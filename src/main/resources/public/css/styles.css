@@ -1,0 +1,183 @@
+
+/* Footer */
+.timepicker-footer {
+  margin: 0 auto;
+  padding: 5px 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.timepicker-clear {
+  color: #F44336;
+}
+
+.timepicker-close {
+  color: #26a69a;
+}
+
+.timepicker-clear,
+.timepicker-close {
+  padding: 0 20px;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 601px) {
+  .timepicker-modal {
+    max-width: 600px;
+  }
+  .timepicker-container.modal-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .timepicker-text-container {
+    top: 32%;
+  }
+  .timepicker-display-am-pm {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    text-align: center;
+    margin-top: 1.2rem;
+  }
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+
+
+/*INICIO todos los planes de estudio*/
+#tipocarrera {
+    color: #00548d;
+    font-size: 120%;
+    line-height: 1.58;
+    text-align: justify;
+    font-weight: 600;
+    text-transform: uppercase;
+    --padding-left: 2%;
+    --padding-right: 2%;
+	padding-left: 2%;
+	padding-top: 2%;
+}
+
+#estructuraOrganizacionPlanDeEstudio {
+    color: #00548d;
+    font-size: 120%;
+    line-height: 1.58;
+    text-align: justify;
+    font-weight: 300;
+    text-transform: uppercase;
+    --padding-left: 2%;
+    --padding-right: 2%;
+	padding-left: 0.5%;
+	padding-top: 2%;
+}
+
+#estructuraOrganizacionDescripcion {
+    --padding-left: 2%;
+    --padding-right: 2%;
+    text-align: justify;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+}
+
+#planDeEstudios {
+    background: #eeeeee;
+    margin-top: 5%;
+    --margin-left: 2%;
+    --margin-right: 2%;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.collapsible-header {
+    background-color: #2f548a;
+    color: #ffffff;
+}
+
+
+.materia {
+    padding: 0%;
+    color: #000000;
+    font-size: 100%;
+    line-height: 1.508;
+    text-align: left;
+    font-weight: bold;
+}
+
+div {
+    display: block;
+}
+
+
+
+.collapsible-header:hover{
+    background-color: #83c8c4;
+}
+
+.collapsible-header.active {
+    background-color: #83c8c4;
+}
+
+element.style {
+    display: none;
+}
+
+/*FINAL todos los planes de estudio*/
+
+
+/*INICIO cplandeestudio.html*/
+.extremos{
+	margin-top: -2%;
+	padding: 0.5%;
+}
+
+/*FINAL cplandeestudio.html*/
+
+
+/*INICIO login.html*/
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	}
+	main {
+	flex: 1 0 auto;
+	}
+	body {
+	background: #fff;
+	}
+	.input-field input[type=date]:focus + label,
+	.input-field input[type=text]:focus + label,
+	.input-field input[type=email]:focus + label,
+	.input-field input[type=password]:focus + label {
+	color: #01579b;
+	}
+	.input-field input[type=date]:focus,
+	.input-field input[type=text]:focus,
+	.input-field input[type=email]:focus,
+	.input-field input[type=password]:focus {
+	border-bottom: 2px solid #01579b;
+	box-shadow: none;
+	}
+/*FINAL login.html*/
+

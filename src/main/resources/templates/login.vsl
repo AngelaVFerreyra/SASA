@@ -1,0 +1,74 @@
+<body class="gray lighten-5">
+      <header>
+         <nav class="light-blue darken-4">
+            <div class="nav-wrapper container">
+               <a href="#!" class="brand-logo">SASA</a>
+            </div>
+         </nav>
+      </header>
+      <br>
+      <div class="section"></div>
+      <main>
+         <br>
+         <div class="container">
+            <center>
+               <div class="section"></div>
+               <div class="container">
+                  <div class="z-depth-3 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+                     <h5 class="light-blue-text text-darken-4">Inicio de sesión</h5>
+                     <form class="col s12" method="post">
+                        <div class='row'>
+                           <div class='col s12'>
+                           </div>
+                        </div>
+                        <div class='row'>
+                           <div class='input-field col s12'>
+                              <i class="material-icons prefix">account_circle</i>
+                              <input id="usuario" name="usuario" value="$!request.queryParams("usuario")" type="text" class="validate">
+                              <label for="usuario">Usuario</label>
+                           </div>
+                        </div>
+                        <div class='row'>
+                           <div class='input-field col s12'>
+                              <i class="material-icons prefix">vpn_key</i>
+                              <input id="contrase" name="contraseña" type="password" class="validate">
+                              <label for="contraseña">Contraseña</label>
+                           </div>
+                        </div>
+                        <br />
+                        <center>
+        #if ($error)
+        <span class="red-text">$error</span>
+        #end
+
+                           <div class='row'>
+                              <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect light-blue darken-4'>Ingresar</button>
+                           </div>
+                        </center>
+                     </form>
+                  </div>
+               </div>
+            </center>
+         </div>
+      </main>
+      <div class="section"></div>
+      <div class="section"></div>
+      </main>
+      <footer class="page-footer grey">
+         <div class="container">
+            <div class="row">
+               <div class="col l6 s12">
+                  <h6 class="white-text">Proyecto intercátedra de AYDS2 y POW - UNLPam</h6>
+                  <h6 class="white-text">Sistema Administrativo de Secretaría Académica</h6>
+               </div>
+               <div class="col l4 offset-l2 s12">
+               </div>
+            </div>
+         </div>
+         <div class="footer-copyright">
+            <div class="container">
+               © 2021 Grupo FGP
+            </div>
+         </div>
+      </footer>
+   </body>

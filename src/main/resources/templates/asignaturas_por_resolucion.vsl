@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>SASA</title>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
+	  <link href="css/styles.css" rel="stylesheet">
+	  <link rel="shortcut icon" href="imagenes/favicon.ico">
+	</head>
+   <body class="gray lighten-5" style="background-image: url(imagenes/work.jpg); background-size: cover;">
+      <header>
+         <nav class="light-blue darken-4" role="navigation">
+            <div class="nav-wrapper container">
+               <a href="index_administrador.html" class="brand-logo">SASA</a>
+               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+               <ul class="right hide-on-med-and-down">
+                     <li><a href="carreras">Ver Planes de Estudio</a></li>
+                     <li><a href="logout">Cerrar sesión</a></li>
+               </ul>
+            </div>
+         </nav>
+         <ul class="sidenav" id="mobile-demo">
+            <br><br>
+
+             <li><a href="carreras">Ver Planes de Estudio</a></li>
+             <li><a href="logout">Cerrar sesión</a></li>
+         </ul>
+         <div class="section no-pad-bot" id="index-banner">
+            <br>
+            <div class="container z-depth-3 grey lighten-4" style="background-color: white; border-radius: 25px;">
+                            <div style="margin:15px;">
+				<div id="tipocarrera"><u>$asignaturas[0].getCarrera()</u></div>
+				<div id="estructuraOrganizacionPlanDeEstudio">Estructura y organización</div>
+                                <div id="estructuraOrganizacionDescripcion"></div>
+                            </div>
+				<div id="planDeEstudios">
+					<ul class="collapsible" data-collapsible="expandable">
+						<li>
+							<div class="collapsible-header active"><i class="material-icons">assessment</i>1er año </div>
+							<div class="collapsible-body">
+                                                                #foreach ($asignatura is $asignaturas)
+                                                                     #if ($asignatura.getAnio() == 1)
+								    <div class="materia">$asignatura.getAsignatura()</div>
+                                                                    #end
+								#end
+							</div>
+						</li>
+                                                <li>
+							<div class="collapsible-header active"><i class="material-icons">assessment</i>2do año </div>
+							<div class="collapsible-body">
+                                                                #foreach ($asignatura is $asignaturas)
+                                                                     #if ($asignatura.getAnio() == 2)
+								    <div class="materia">$asignatura.getAsignatura()</div>
+                                                                    #end
+								#end
+							</div>
+						</li>
+
+                                                <li>
+							<div class="collapsible-header active"><i class="material-icons">assessment</i>3er año </div>
+							<div class="collapsible-body">
+                                                                #foreach ($asignatura is $asignaturas)
+                                                                     #if ($asignatura.getAnio() == 3)
+								    <div class="materia">$asignatura.getAsignatura()</div>
+                                                                    #end
+								#end
+							</div>
+						</li>
+                                                #if($asignaturas[0].getCarrera_duracion()>3)
+                                                    <li>
+                                                            <div class="collapsible-header active"><i class="material-icons">assessment</i>4to año </div>
+                                                            <div class="collapsible-body">
+                                                                    #foreach ($asignatura is $asignaturas)
+                                                                         #if ($asignatura.getAnio() == 4)
+                                                                        <div class="materia">$asignatura.getAsignatura()</div>
+                                                                        #end
+                                                                    #end
+                                                            </div>
+                                                    </li>
+                                                     #if($asignaturas[0].getCarrera_duracion()>4)
+                                                        <li>
+                                                                <div class="collapsible-header active"><i class="material-icons">assessment</i>5to año </div>
+                                                                <div class="collapsible-body">
+                                                                        #foreach ($asignatura is $asignaturas)
+                                                                             #if ($asignatura.getAnio() == 5)
+                                                                            <div class="materia">$asignatura.getAsignatura()</div>
+                                                                            #end
+                                                                        #end
+                                                                </div>
+                                                        </li>
+                                                        #if($asignaturas[0].getCarrera_duracion()>5)
+                                                            <li>
+                                                                    <div class="collapsible-header active"><i class="material-icons">assessment</i>$i año </div>
+                                                                    <div class="collapsible-body">
+                                                                            #foreach ($asignatura is $asignaturas)
+                                                                                 #if ($asignatura.getAnio() == 6)
+                                                                                <div class="materia">$asignatura.getAsignatura()</div>
+                                                                                #end
+                                                                            #end
+                                                                    </div>
+                                                            </li>
+                                                        #end
+                                                    #end
+					       #end
+					</ul>
+				</div>
+                           
+               <br><br>
+            </div>
+         </div>
+      </header>
+      <main>
+         <div class="container">
+         </div>
+      </main>
+      <footer class="page-footer grey">
+         <div class="container">
+            <div class="row">
+               <div class="col l6 s12">
+                  <h6 class="white-text">Proyecto intercátedra de AYDS2 y POW - UNLPam</h6>
+                  <h6 class="white-text">Sistema Administrativo de Secretaría Académica</h6>
+               </div>
+               <div class="col l4 offset-l2 s12">
+               </div>
+            </div>
+         </div>
+         <div class="footer-copyright">
+            <div class="container">
+               © 2021 Grupo FGP
+            </div>
+         </div>
+      </footer>
+      <script src="js/jquery-3.5.1.min.js"></script>
+      <script src="js/materialize.js"></script>
+      <script>
+         $(document).ready(function(){
+           $('.sidenav').sidenav();
+         });
+             
+      </script>
+	  <script>
+		    
+	  </script>
+	  <!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+   </body>
+</html>
