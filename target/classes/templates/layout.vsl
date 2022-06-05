@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>SASA</title>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="css/styles.css" rel="stylesheet">
+   <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+   <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/materialize.js"></script>
+   
+<script> window.addEventListener( "pageshow", function ( event ) {
+  var historyTraversal = event.persisted || 
+                         ( typeof window.performance != "undefined" && 
+                              window.performance.navigation.type === 2 );
+  if ( historyTraversal ) {
+    // Handle page restore.
+    window.location.reload();
+  }
+});
+</script>
+   <style>
+      body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      }
+      main {
+      flex: 1 0 auto;
+      }
+      body {
+      background: #fff;
+      }
+      .input-field input[type=date]:focus + label,
+      .input-field input[type=text]:focus + label,
+      .input-field input[type=email]:focus + label,
+      .input-field input[type=password]:focus + label {
+      color: #01579b;
+      }
+      .input-field input[type=date]:focus,
+      .input-field input[type=text]:focus,
+      .input-field input[type=email]:focus,
+      .input-field input[type=password]:focus {
+      border-bottom: 2px solid #01579b;
+      box-shadow: none;
+      }
+   </style>
+   </head>
+
+    #parse( $template )
+
+</html>

@@ -1,0 +1,67 @@
+<body class="gray lighten-5">
+   <header>
+      <nav class="light-blue darken-4" role="navigation">
+         <div class="nav-wrapper container">
+            <a href="index" class="brand-logo">SASA</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+               <li><a href="getPPSS">Ver PPSs</a></li>
+                <li><a href="getPPSSevaluar">Evaluar PPSs</a></li>
+               <li><a href="logout">Cerrar sesión</a></li>
+            </ul>
+         </div>
+      </nav>
+      <ul class="sidenav" id="mobile-demo">
+         <br><br>
+         <li><a href="getPPSS">Ver PPSs</a></li>
+         <li><a href="getPPSSevaluar">Evaluar PPSs</a></li>
+         <li><a href="/logout">Cerrar sesión</a></li>
+      </ul>
+   </header>
+   <main>
+
+        <div class="container" style="background-color: white;">
+            <h3 class="header center black-text">Evaluar PPS</h3>
+            <h4 class="header col s12 light">[$instance.getId_pps()] $instance.getTitulo() </h4>
+            <div>
+                <p class="flow-text" style="font-weight: bold;"> Descripcion: </p>
+                <p class="flow-text"> $instance.getDescripcion() </p>
+                <br>
+                <p class="flow-text" style="font-weight: bold;"> Bibliografia: </p>
+                <p class="flow-text"> $instance.getBibliografia() </p>   
+                <br>
+            </div>
+            <div>
+            <hr size="2px" color="#01579b"/>
+           
+        </div>
+
+</main>
+   <footer class="page-footer grey">
+      <div class="container">
+         <div class="row">
+            <div class="col l6 s12">
+               <h6 class="white-text">Proyecto intercátedra de AYDS2 y POW - UNLPam</h6>
+               <h6 class="white-text">Sistema Administrativo de Secretaría Académica</h6>
+            </div>
+            <div class="col l4 offset-l2 s12">
+            </div>
+         </div>
+      </div>
+      <div class="footer-copyright">
+         <div class="container">
+            © 2021 Grupo FGP
+         </div>
+      </div>
+   </footer>
+   <script src="js/jquery-3.5.1.min.js"></script>
+   <script src="js/materialize.js"></script>
+   <script>
+      $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });
+
+      
+   </script>
+</body>
+

@@ -1,0 +1,137 @@
+<body class="gray lighten-5">
+   <header>
+      <nav class="light-blue darken-4" role="navigation">
+         <div class="nav-wrapper container">
+            <a href="index" class="brand-logo">SASA</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+               <li><a href="cargarpps">Cargar PPS</a></li>
+                 <li><a href="estadopps">Ver estado de PPS</a></li>
+                 <li><a href="logout">Cerrar sesión</a></li>
+            </ul>
+         </div>
+      </nav>
+      <ul class="sidenav" id="mobile-demo">
+         <br><br>
+         <li><a href="cargarpps">Cargar PPS</a></li>
+         <li><a href="estadopps">Ver estado de PPS</a></li>
+         <li><a href="logout">Cerrar sesión</a></li>
+      </ul>
+   </header>
+   <main>
+      <div class="container">
+         <div class="row">
+            <h4>Cargar PPS</h4>
+            <form class="col s12" action="insertarpps" method="post">
+               <div class="input-field col s12">
+                  <select id="carrera" name="carrera" required>
+                     <option value="" disabled selected>Elije una opción</option>
+                     #foreach ($carrera is $carreras)
+                     <option value="$carrera.getNombre()">$carrera.getNombre()</option>
+                     #end
+                  </select>
+                  <label>Carrera</label>
+               </div>
+               <div class="input-field col s12">
+                  <textarea id="titulo" name="titulo" class="materialize-textarea" data-length="45" required></textarea>
+                  <label for="titulo">Título de PPS</label>
+               </div>
+               <div class="input-field col s12">
+                  <textarea id="descripcion" name="descripcion" class="materialize-textarea" data-length="65535" required></textarea>
+                  <label for="descripcion">Descripción</label>
+               </div>
+               <div class="input-field col s12">
+                  <textarea id="etapasyobjetivos" name="etapasyobjetivos" class="materialize-textarea" data-length="65535" required></textarea>
+                  <label for="etapasyobjetivos">Etapas y objetivos</label>
+               </div>
+               <div class="input-field col s12">
+                  <textarea id="bibliografia" name="bibliografia" class="materialize-textarea" data-length="65535" required></textarea>
+                  <label for="bibliografia">Bibliografía</label>
+               </div>
+               <p>
+                  <label for="pares">
+                  <input id="pares" name="pares" type="checkbox" class="filled-in" value="true"/>
+                  <span>Es de a pares.</span>
+                  </label>
+               </p>
+               <div class="input-field col s12">
+                  <select id="asignatura" name="asignatura" required>
+                     <option value="" disabled selected>Elije una opción</option>
+                     #foreach ($asignatura is $asignaturas)
+                     <option value="$asignatura.getNombre()">$asignatura.getNombre()</option>
+                     #end
+                  </select>
+                  <label>Asignatura a utilizar</label>
+               </div>
+               <div class="input-field col s12">
+                  <select id="tutordocente" name="tutordocente" required>
+                     <option value="" disabled selected>Elije una opción</option>
+                     #foreach ($docente is $docentes)
+                     <option value="$docente.getDNI()">$docente.getApellidos() $docente.getNombres()</option>
+                     #end
+                  </select>
+                  <label>Tutor docente</label>
+               </div>
+               <div class="input-field col s12">
+                  <select id="organizacion" name="organizacion" required>
+                     <option value="" disabled selected>Elije una opción</option>
+                     #foreach ($organizacion is $organizaciones)
+                     <option value="$organizacion.getNombre()">$organizacion.getNombre()</option>
+                     #end
+                  </select>
+                  <label>Organización</label>
+               </div>
+               <div class="input-field col s12">
+                  <select id="tutororganizacion" name="tutororganizacion" required>
+                     <option value="" disabled selected>Elije una opción</option>
+                     #foreach ($tutor is $tutoresorganizacion)
+                     <option value="$tutor.getDNI()" >$tutor.getOrganizacion() -  $tutor.getApellidos() $tutor.getNombres()</option>
+                     #end
+                  </select>
+                  <label>Tutor de organización</label>
+               </div>
+               <button class="btn waves-effect waves-light" type="submit" name="action" onclick="carga()">Enviar
+               <i class="material-icons right">send</i>
+               </button>
+            </form>
+         </div>
+      </div>
+   </main>
+   <footer class="page-footer grey">
+      <div class="container">
+         <div class="row">
+            <div class="col l6 s12">
+               <h6 class="white-text">Proyecto intercátedra de AYDS2 y POW - UNLPam</h6>
+               <h6 class="white-text">Sistema Administrativo de Secretaría Académica</h6>
+            </div>
+            <div class="col l4 offset-l2 s12">
+            </div>
+         </div>
+      </div>
+      <div class="footer-copyright">
+         <div class="container">
+            © 2021 Grupo FGP
+         </div>
+      </div>
+   </footer>
+   <script src="js/materialize.js"></script>
+   <script>
+      $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });
+      
+      $(document).ready(function() {
+      $('input#input_text, textarea').characterCounter();
+      });
+      
+        $(document).ready(function(){
+      $('select').formSelect();
+      });
+
+      function carga(){
+
+       alert("¡Carga exitosa!");
+       };
+         
+   </script>
+</body>
